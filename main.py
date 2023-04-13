@@ -2,13 +2,12 @@ import os
 import pyowm
 
 import requests
-import dotenv
+import envate
 from telegram import Bot, ReplyKeyboardMarkup
 from telegram.ext import Updater, CommandHandler, MessageHandler
 
-dotenv.load_dotenv()
-secret_token = os.getenv('TOKEN')
-chat_id = os.getenv('CHAT_ID')
+secret_token = envate.TOKEN
+chat_id = envate.CHAT_ID
 
 
 URL = 'https://api.thecatapi.com/v1/images/search'
