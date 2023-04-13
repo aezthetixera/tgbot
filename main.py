@@ -2,11 +2,11 @@ import os
 import pyowm
 
 import requests
-from dotenv import load_dotenv
+import dotenv
 from telegram import Bot, ReplyKeyboardMarkup
 from telegram.ext import Updater, CommandHandler, MessageHandler
 
-load_dotenv()
+dotenv.load_dotenv()
 secret_token = os.getenv('TOKEN')
 chat_id = os.getenv('CHAT_ID')
 
